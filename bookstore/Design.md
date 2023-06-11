@@ -1,33 +1,33 @@
 ### sql 版本的表结构
 
 ##### Table User
-- user_id
+- user_id PRIMARY FOREIGNKEY
 - password
 - balance
 - token
 - terminal
 
 ### Table Book
-- store_id PRIMARY
+- store_id PRIMARY FOREIGNKEY
 - book_id PRIMARY
 - book_info
 - stock_level
 
 ### Table UsertoStore
 - user_id
-- store_id
+- store_id PRIMARY
 
 ### Table Order
-- order_id
-- buyer
-- store_id
+- order_id PRIMARY FOREIGNKEY
+- buyer FOREIGNKEY
+- store_id FOREIGNKEY
 - state
 - total_price
 - timestamp
 
 ### Table OrdertoBooks
-- order_id
-- book_id
+- order_id PRIMARY FOREIGNKEY
+- book_id PRIMARY
 - count
 - price
 
